@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajer Shop - Professional E-commerce Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: Add custom base styles or component styles here if needed */
+        body {
+            font-family: 'Inter', sans-serif; /* Using a common modern font */
+        }
+        /* Adding a subtle animation for hover effects */
+        .transform-gpu {
+             transform: translateZ(0); /* Promote element to its own layer for better performance */
+        }
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .testimonial-card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    <link rel="preconnect" href="https://rsms.me/">
+     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Tajer Shop
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#hero" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                <a href="#categories" class="text-gray-600 hover:text-blue-600 transition-colors">Categories</a>
+                <a href="#products" class="text-gray-600 hover:text-blue-600 transition-colors">Products</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
+                <a href="#newsletter" class="text-gray-600 hover:text-blue-600 transition-colors">Newsletter</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg transform hover:scale-105">Contact Us</a>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section id="hero" class="container mx-auto px-6 py-24 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-gray-900 leading-tight">
+            Discover <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Amazing</span> Products
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Your one-stop shop for high-quality gadgets, stylish accessories, and everyday essentials. Explore our curated collection.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#products" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Shop Now
+            </a>
+            <a href="#categories" class="bg-white text-blue-600 border border-blue-600 px-8 py-3 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Explore Categories
+            </a>
+        </div>
+    </section>
+
+    <section id="categories" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Shop by Category</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Browse our wide selection of products across popular categories</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <div class="h-40 bg-blue-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1606041011872-596597976b25" alt="Electronics" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg">Electronics</h3>
+                        <p class="text-sm text-gray-600 mt-1">42 Products</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <div class="h-40 bg-green-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9" alt="Fashion" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg">Fashion</h3>
+                        <p class="text-sm text-gray-600 mt-1">86 Products</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <div class="h-40 bg-purple-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="Home & Living" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg">Home & Living</h3>
+                        <p class="text-sm text-gray-600 mt-1">53 Products</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <div class="h-40 bg-yellow-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f" alt="Beauty" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg">Beauty</h3>
+                        <p class="text-sm text-gray-600 mt-1">38 Products</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df" alt="Product 1" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-800">Premium Wireless Earbuds</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">New</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">Experience crystal clear audio with long-lasting battery life. Perfect for music and calls.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$79.99</span>
+                            <button class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 transition-colors text-sm font-medium shadow-sm hover:shadow-md transform hover:scale-105">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Product 2" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-800">Modern Smart Watch</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Popular</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">Track your fitness, receive notifications, and stay connected in style. Water-resistant.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$149.50</span>
+                            <button class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 transition-colors text-sm font-medium shadow-sm hover:shadow-md transform hover:scale-105">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+                     <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="Product 3" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-800">Ergonomic Desk Chair</h3>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Sale</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">Improve your posture and comfort during long work hours. Adjustable and durable.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-blue-600">$299.00</span>
+                                <span class="text-sm text-gray-500 line-through ml-2">$349.00</span>
+                            </div>
+                            <button class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 transition-colors text-sm font-medium shadow-sm hover:shadow-md transform hover:scale-105">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                    See all products &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-gradient-to-r from-blue-500 to-purple-600 relative">
+        <div class="absolute inset-0 bg-pattern opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-4xl font-bold text-center mb-4 text-white">What Our Customers Say</h2>
+            <p class="text-center text-blue-100 mb-12 max-w-2xl mx-auto">Don't just take our word for it - hear from our satisfied customers</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The quality of the products exceeded my expectations. Fast shipping and excellent customer service. Will definitely shop here again!"</p>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"I've been a loyal customer for over a year now. Their product selection is unmatched and the website is so easy to navigate."</p>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Emily Rodriguez</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The smart watch I purchased has completely transformed my fitness routine. Great value for money and arrived earlier than expected!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 bg-gradient-to-br from-blue-600 to-purple-600 p-12 text-white">
+                        <h3 class="text-3xl font-bold mb-4">Stay Updated</h3>
+                        <p class="mb-6">Subscribe to our newsletter to receive updates on new products, special offers, and exclusive discounts.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span>Weekly product updates</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span>Exclusive subscriber discounts</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span>Early access to sales</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 p-12">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Join Our Newsletter</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-medium hover:opacity-90 transition-opacity">
+                                Subscribe Now
+                            </button>
+                            <p class="text-xs text-gray-500 mt-2">We respect your privacy. Unsubscribe at any time.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Tajer Shop</h4>
+                    <p class="mb-4">Your one-stop destination for quality products at competitive prices.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Returns & Refunds</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Get In Touch</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>123 Commerce St, Business City, 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>support@tajershop.com</span>
+                        </li>
+                    </ul>
+                    <a href="mailto:support@tajershop.com" class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg text-base font-medium shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 inline-block mt-4">
+                        Email Support
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p>&copy; <span id="current-year"></span> Tajer Shop. All rights reserved.</p>
+                <p class="text-sm mt-2">Designed with ❤️ using Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'fixed inset-0 bg-gray-900 bg-opacity-90 z-50 flex items-center justify-center';
+            mobileMenu.innerHTML = `
+                <div class="bg-white rounded-xl p-8 max-w-sm w-full mx-4">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold">Menu</h3>
+                        <button class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <a href="#hero" class="text-gray-800 hover:text-blue-600 transition-colors py-2 border-b border-gray-100">Home</a>
+                        <a href="#categories" class="text-gray-800 hover:text-blue-600 transition-colors py-2 border-b border-gray-100">Categories</a>
+                        <a href="#products" class="text-gray-800 hover:text-blue-600 transition-colors py-2 border-b border-gray-100">Products</a>
+                        <a href="#testimonials" class="text-gray-800 hover:text-blue-600 transition-colors py-2 border-b border-gray-100">Testimonials</a>
+                        <a href="#newsletter" class="text-gray-800 hover:text-blue-600 transition-colors py-2 border-b border-gray-100">Newsletter</a>
+                        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-md text-center mt-2">Contact Us</a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(mobileMenu);
+            
+            mobileMenu.querySelector('button').addEventListener('click', function() {
+                document.body.removeChild(mobileMenu);
+            });
+            
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.body.removeChild(mobileMenu);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
